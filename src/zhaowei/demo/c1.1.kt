@@ -21,6 +21,22 @@ fun maxOf(a: Int, b:Int) : Int {
     }
 }
 
+fun parseInt(str: String) : Int? {
+    return str.toIntOrNull();
+}
+
+fun printProduct(arg1: String, arg2: String) {
+    val x = parseInt(arg1)
+    val y = parseInt(arg2)
+
+    if (x != null && y!= null) {
+        println(x * y)
+    } else {
+        println("either '$arg1' or '$arg2' is not a number")
+
+    }
+}
+
 fun main(args: Array<String>) {
 
     println(sum(3, 5))
@@ -35,5 +51,8 @@ fun main(args: Array<String>) {
 
     println("max of 0 and 42 is ${maxOf(0, 42)}")
 
+    printProduct("6", "7")
+    printProduct("a", "7")
+    printProduct("a", "b")
 
 }
