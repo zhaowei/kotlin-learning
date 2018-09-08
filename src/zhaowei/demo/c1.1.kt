@@ -55,4 +55,14 @@ fun main(args: Array<String>) {
     printProduct("a", "7")
     printProduct("a", "b")
 
+    val items = listOf("apple", "banana", "kiwifruit")
+    for (item in items) {
+        println(item)
+    }
+
+    for (index in items.indices) {
+        println("item at $index is ${items[index]}")
+
+    }
+
 }
